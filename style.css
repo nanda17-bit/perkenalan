@@ -1,0 +1,124 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  /* display:flex; */
+  font-family: 'Segoe UI', sans-serif;
+  background:white;
+  /* color: #2f3640; */
+  color:white;
+  line-height: 1.6;
+}
+
+section {
+  background-color:grey;
+  border-radius:30px ;
+  padding:25px;
+}
+
+.container {
+  max-width: 900px;
+  margin: auto;
+  padding: 20px;
+}
+
+header {
+  text-align: center;
+  padding: 30px 0;
+  background-color: aqua;
+}
+
+header h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+  color: #273c75;
+}
+
+.title {
+  font-size: 1.2em;
+  color: #718093;
+}
+
+.profile {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.profile img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #00a8ff;
+  transition: transform 0.3s ease;
+}
+
+.profile img:hover {
+  transform: scale(1.05);
+}
+
+.about, .video-section, .experience, .skills, .contact {
+  margin: 30px 0;
+}
+
+.video-wrapper {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+}
+
+.video-wrapper iframe {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+ul {
+  list-style-type: square;
+  padding-left: 20px;
+}
+
+.skill {
+  margin: 10px 0;
+}
+
+.progress-bar {
+  width: 100%;
+  background-color: #ddd;
+  border-radius: 5px;
+  overflow: hidden;
+  height: 25px;
+  position: relative;
+}
+
+.progress {
+  height: 100%;
+  background-color: aqua;
+  display: flex;
+  align-items: center;   /* Vertikal tengah */
+  justify-content: center; /* Horizontal tengah */
+  color: white;
+  font-weight: bold;
+  transition: width 0.3s ease;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9em;
+  color: #aaa;
+}
+
+/* Animasi saat load */
+body.loaded .progress {
+  animation: fillProgress 2s ease forwards;
+}
+
+@keyframes fillProgress {
+  0% { width: 0; }
+}
